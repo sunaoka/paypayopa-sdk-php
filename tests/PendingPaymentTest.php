@@ -1,11 +1,12 @@
 <?php
 
+namespace PayPay\OpenPaymentAPI\Tests;
+
 use PayPay\OpenPaymentAPI\Models\CreateContinuousPaymentPayload;
 use PayPay\OpenPaymentAPI\Models\CreatePendingPaymentPayload;
 use PayPay\OpenPaymentAPI\Models\ModelException;
 use PayPay\OpenPaymentAPI\Models\RefundPaymentPayload;
 
-require_once 'TestBoilerplate.php' ;
 final class PendingPaymentTest extends TestBoilerplate
 {
     /**

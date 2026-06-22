@@ -1,9 +1,10 @@
 <?php
 
+namespace PayPay\OpenPaymentAPI\Tests;
+
 use PayPay\OpenPaymentAPI\Models\CreateContinuousPaymentPayload;
 use PayPay\OpenPaymentAPI\Models\ModelException;
 
-require_once('TestBoilerplate.php');
 final class ContinuousPaymentTest extends TestBoilerplate
 {
     /**

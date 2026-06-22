@@ -1,5 +1,5 @@
 <?php
-require_once('TestBoilerplate.php');
+namespace PayPay\OpenPaymentAPI\Tests;
 
 use PayPay\OpenPaymentAPI\Models\AccountLinkPayload;
 

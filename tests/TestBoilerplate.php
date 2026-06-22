@@ -1,7 +1,8 @@
 <?php
 
 declare(strict_types=1);
-require_once(__DIR__ . '/../src/Client.php');
+
+namespace PayPay\OpenPaymentAPI\Tests;
 
 use PHPUnit\Framework\TestCase;
 use PayPay\OpenPaymentAPI\Client;

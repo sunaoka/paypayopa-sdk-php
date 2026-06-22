@@ -1,10 +1,10 @@
 <?php
 
+namespace PayPay\OpenPaymentAPI\Tests;
+
 use PayPay\OpenPaymentAPI\Models\CapturePaymentAuthPayload;
 use PayPay\OpenPaymentAPI\Models\CreatePaymentAuthPayload;
 use PayPay\OpenPaymentAPI\Models\RevertAuthPayload;
-
-require_once('TestBoilerplate.php');
 
 class PreAuthTest extends TestBoilerplate
 {

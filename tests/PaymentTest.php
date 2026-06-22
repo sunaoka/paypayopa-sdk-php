@@ -1,8 +1,9 @@
 <?php
 
+namespace PayPay\OpenPaymentAPI\Tests;
+
 use PayPay\OpenPaymentAPI\Models\CreatePaymentPayload;
 
-require_once('TestBoilerplate.php');
 final class PaymentTest extends TestBoilerplate
 {
     /**

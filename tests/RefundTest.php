@@ -1,10 +1,11 @@
 <?php
 
+namespace PayPay\OpenPaymentAPI\Tests;
+
 use PayPay\OpenPaymentAPI\Models\CreateQrCodePayload;
 use PayPay\OpenPaymentAPI\Models\OrderItem;
 use PayPay\OpenPaymentAPI\Models\RefundPaymentPayload;
 
-require_once('TestBoilerplate.php');
 final class RefundTest extends TestBoilerplate
 {
 

@@ -31,7 +31,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "PayPay\\OpenPaymentAPI\\Test\\": "test/"
+            "PayPay\\OpenPaymentAPI\\Tests\\": "tests/"
         }
     },
     "config": {

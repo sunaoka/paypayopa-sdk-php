@@ -1,8 +1,9 @@
 <?php
 
+namespace PayPay\OpenPaymentAPI\Tests;
+
 use PayPay\OpenPaymentAPI\Controller\ClientControllerException;
 
-require_once('TestBoilerplate.php');
 final class WalletTest extends TestBoilerplate
 {
 

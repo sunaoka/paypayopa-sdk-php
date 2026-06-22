@@ -1,9 +1,9 @@
 <?php
 
+namespace PayPay\OpenPaymentAPI\Tests;
+
 use PayPay\OpenPaymentAPI\Client;
 use PayPay\OpenPaymentAPI\ClientException;
-
-require_once('TestBoilerplate.php');
 
 class CoreClassesTest extends TestBoilerplate
 {

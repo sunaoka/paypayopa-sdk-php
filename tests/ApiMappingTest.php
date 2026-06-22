@@ -1,6 +1,6 @@
 <?php
 
-require_once('TestBoilerplate.php');
+namespace PayPay\OpenPaymentAPI\Tests;
 
 class ApiMappingTest extends TestBoilerplate
 {
