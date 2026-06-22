@@ -3,7 +3,7 @@
 use PayPay\OpenPaymentAPI\Controller\ClientControllerException;
 
 require_once('TestBoilerplate.php');
-final class ResolveTest extends BoilerplateTest
+final class ResolveTest extends TestBoilerplate
 {
     public function testNonDocResolve()
     {
@@ -18,7 +18,7 @@ final class ResolveTest extends BoilerplateTest
     {
         try {
             $resultInfo =[
-                
+
                 "code"=>"UNAUTHORIZED",
                 "message"=>"Unauthorized request",
                 "codeId"=>"08100016"

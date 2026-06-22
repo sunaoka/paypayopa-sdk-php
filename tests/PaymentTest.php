@@ -3,7 +3,7 @@
 use PayPay\OpenPaymentAPI\Models\CreatePaymentPayload;
 
 require_once('TestBoilerplate.php');
-final class PaymentTest extends BoilerplateTest
+final class PaymentTest extends TestBoilerplate
 {
     /**
      * Create direct debit payment
@@ -43,7 +43,7 @@ final class PaymentTest extends BoilerplateTest
         $resultInfo = $resp['resultInfo'];
         $this->assertEquals('REQUEST_ACCEPTED', $resultInfo['code']);
     }
-    
+
     /**
      * tests Create And Cancel
      *

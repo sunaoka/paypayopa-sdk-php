@@ -6,7 +6,7 @@ use PayPay\OpenPaymentAPI\Models\ModelException;
 use PayPay\OpenPaymentAPI\Models\RefundPaymentPayload;
 
 require_once 'TestBoilerplate.php' ;
-final class PendingPaymentTest extends BoilerplateTest
+final class PendingPaymentTest extends TestBoilerplate
 {
     /**
      * Create pending payment
@@ -23,7 +23,7 @@ final class PendingPaymentTest extends BoilerplateTest
             "amount" => rand(5, 20),
             "currency" => "JPY"
         ];
-        
+
         $CPPPayload
             ->setMerchantPaymentId(uniqid('TESTMERCH_PAY_ID'))
             ->setRequestedAt()
@@ -51,7 +51,7 @@ final class PendingPaymentTest extends BoilerplateTest
         $paymentDetails = $client->payment->getPaymentDetails($merchantPaymentId, 'pending');
         $this->data=$paymentDetails["data"];
         $this->assertEquals('SUCCESS', $paymentDetails['resultInfo']['code']);
-        
+
         echo'\n===================Pending Payment Details===================\n';
     }
     /**

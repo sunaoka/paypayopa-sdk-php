@@ -4,7 +4,7 @@ use PayPay\OpenPaymentAPI\Models\CashBackPayload;
 use PayPay\OpenPaymentAPI\Models\ReverseCashBackPayload;
 
 require_once('TestBoilerplate.php');
-final class CashbackTest extends BoilerplateTest
+final class CashbackTest extends TestBoilerplate
 {
     /**
      * Tests giveCashback

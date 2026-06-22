@@ -1,7 +1,7 @@
 <?php
 
 require_once('TestBoilerplate.php');
-final class UserTest extends BoilerplateTest
+final class UserTest extends TestBoilerplate
 {
     /**
      * Default user authorization id for testing
@@ -18,7 +18,7 @@ final class UserTest extends BoilerplateTest
         $this->userAuthorizationId = $config['uaid'];
     }
 
-    
+
     /**
      * test for getUserAuthorizationStatus
      *

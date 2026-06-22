@@ -3,7 +3,7 @@ require_once('TestBoilerplate.php');
 
 use PayPay\OpenPaymentAPI\Models\AccountLinkPayload;
 
-class ZCleanupTest extends BoilerplateTest
+class ZCleanupTest extends TestBoilerplate
 {
     public function testShutdown_server()
     {

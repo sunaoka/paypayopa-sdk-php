@@ -15,7 +15,7 @@ use PayPay\OpenPaymentAPI\Models\RevertAuthPayload;
 
 use function PayPay\OpenPaymentAPI\Helpers\GetRand;
 
-class PayloadsTest extends BoilerplateTest
+class PayloadsTest extends TestBoilerplate
 {
     /**
      * Account Link payload test
@@ -74,7 +74,7 @@ class PayloadsTest extends BoilerplateTest
         $test->setUserAuthorizationId("TEST_AUTH_ID");
         $test->setAmount(['amount' => 20, 'currency' => 'JPY']);
         $test->setRequestedAt();
-        
+
         $test->setExpiresAt($this->HourFromNow());
 
         $this->assertIsArray($test->serialize());
@@ -167,7 +167,7 @@ class PayloadsTest extends BoilerplateTest
             ->setRedirectUrl("https://merchant.domain/test/callback")
             ->setUserAgent("UC Browser")
             ->setIsAuthorization(false);
-        
+
         $test->setAuthorizationExpiry($this->HourFromNow());
 
         $this->assertIsArray($test->serialize());

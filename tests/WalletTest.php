@@ -3,9 +3,9 @@
 use PayPay\OpenPaymentAPI\Controller\ClientControllerException;
 
 require_once('TestBoilerplate.php');
-final class WalletTest extends BoilerplateTest
+final class WalletTest extends TestBoilerplate
 {
-    
+
     /**
      * Wallet balance test
      *

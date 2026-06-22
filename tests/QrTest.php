@@ -4,7 +4,7 @@ use PayPay\OpenPaymentAPI\Models\CreateQrCodePayload;
 use PayPay\OpenPaymentAPI\Models\OrderItem;
 
 require_once('TestBoilerplate.php');
-final class QrTest extends BoilerplateTest
+final class QrTest extends TestBoilerplate
 {
     /**
      * Creates QR

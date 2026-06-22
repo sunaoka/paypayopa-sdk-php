@@ -5,7 +5,7 @@ use PayPay\OpenPaymentAPI\ClientException;
 
 require_once('TestBoilerplate.php');
 
-class CoreClassesTest extends BoilerplateTest
+class CoreClassesTest extends TestBoilerplate
 {
     public function testClientNoAuth()
     {
@@ -26,7 +26,7 @@ class CoreClassesTest extends BoilerplateTest
             'MERCHANT_ID' => "MERCHANT_IDENTIFIER_STRING"
         ];
         $client = new Client($config, false, new GuzzleHttp\Client());
-        
+
         $collector["URL"] = $client->GetConfig("API_URL");
         $collector["ENDPOINT"] = $client->GetEndpoint('SUBSCRIPTION');
         $collector["ENDPOINT_VERSION"] = $client->GetEndpointVersion('SUBSCRIPTION');

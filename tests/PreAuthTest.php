@@ -6,7 +6,7 @@ use PayPay\OpenPaymentAPI\Models\RevertAuthPayload;
 
 require_once('TestBoilerplate.php');
 
-class PreAuthTest extends BoilerplateTest
+class PreAuthTest extends TestBoilerplate
 {
     public function Create($similiar=true)
     {
