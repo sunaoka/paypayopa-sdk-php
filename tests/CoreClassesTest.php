@@ -2,6 +2,7 @@
 
 namespace PayPay\OpenPaymentAPI\Tests;
 
+use GuzzleHttp;
 use PayPay\OpenPaymentAPI\Client;
 use PayPay\OpenPaymentAPI\ClientException;
 

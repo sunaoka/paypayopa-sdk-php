@@ -1,6 +1,8 @@
 <?php
 namespace PayPay\OpenPaymentAPI\Tests;
 
+use DateInterval;
+use DateTime;
 use PayPay\OpenPaymentAPI\Models\AccountLinkPayload;
 use PayPay\OpenPaymentAPI\Models\BasePaymentPayload;
 use PayPay\OpenPaymentAPI\Models\CapturePaymentAuthPayload;
