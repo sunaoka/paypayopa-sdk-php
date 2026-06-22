@@ -33,7 +33,7 @@
       <file> tests/RefundTest.php</file>
     </testsuite>
     <testsuite name="User">
-      <file>tests/PipelinedAccountLinkTest.php</file>
+      <file>tests/AccountLinkTest.php</file>
       <file> tests/UserTest.php</file>
       <file> tests/WalletTest.php </file>
       <file> tests/DecodeAccountLinkResponseTest.php </file>
