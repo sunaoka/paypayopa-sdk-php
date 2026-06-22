@@ -30,16 +30,12 @@ class TestBoilerplate extends TestCase
     public function __construct()
     {
         parent::__construct();
-        require('config.php');
+        $config = require('config.php');
         $this->client = new Client([
-            /** @phpstan-ignore-next-line */
             'API_KEY' => $config['key'],
-            /** @phpstan-ignore-next-line */
             'API_SECRET' => $config['secret'],
-            /** @phpstan-ignore-next-line */
             'MERCHANT_ID' => $config['mid']
         ], 'test');
-        /** @phpstan-ignore-next-line */
         $this->config = $config;
     }
     /**

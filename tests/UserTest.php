@@ -14,8 +14,7 @@ final class UserTest extends TestBoilerplate
     public function __construct()
     {
         parent::__construct();
-        require('config.php');
-        /* @phpstan-ignore-next-line */
+        $config = require('config.php');
         $this->userAuthorizationId = $config['uaid'];
     }
 
