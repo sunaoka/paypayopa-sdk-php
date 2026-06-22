@@ -185,6 +185,4 @@ class ReverseCashBackPayload extends Model
 
         return $this;
     }
-
-
 }
