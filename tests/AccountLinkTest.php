@@ -20,8 +20,8 @@ class AccountLinkTest extends TestBoilerplate
             ->setRedirectUrl("https://merchant.domain/test/callback")
             ->setReferenceId(uniqid("TEST123"));
         $resp = $client->user->createAccountLinkQrCode($payload);
-        print_r('AuthURL:');
-        var_dump($resp);
+        // print_r('AuthURL:');
+        // var_dump($resp);
         $this->data = $resp;
     }
     /**

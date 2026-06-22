@@ -17,7 +17,7 @@ class PreAuthTest extends TestBoilerplate
             ->setAmount(['amount' => $similiar?20:rand(5, 17), 'currency' => 'JPY'])
             ->setRequestedAt();
         $resp = $this->client->payment->createPaymentAuth($CPApayload, $similiar);
-        var_dump($resp);
+        // var_dump($resp);
         $this->assertTrue(isset($resp['resultInfo']));
         $this->assertEquals('SUCCESS', $resp['resultInfo']['code'], $resp['resultInfo']['message']);
         $this->data = $resp['data'];

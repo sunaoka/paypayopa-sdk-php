@@ -28,7 +28,7 @@ final class UserTest extends TestBoilerplate
     {
         $this->InitCheck();
         $resp = $this->client->user->getUserAuthorizationStatus($this->userAuthorizationId);
-        var_dump(json_encode($resp));
+        // var_dump(json_encode($resp));
         $resultInfo = $resp['resultInfo'];
         $this->assertEquals('SUCCESS', $resultInfo['code']);
     }
@@ -41,7 +41,7 @@ final class UserTest extends TestBoilerplate
     {
         $this->InitCheck();
         $resp = $this->client->user->getMaskedUserProfile($this->userAuthorizationId);
-        var_dump(json_encode($resp));
+        // var_dump(json_encode($resp));
         $resultInfo = $resp['resultInfo'];
         $this->assertEquals('SUCCESS', $resultInfo['code']);
     }
@@ -53,7 +53,7 @@ final class UserTest extends TestBoilerplate
     public function testUnlink()
     {
         $resp = $this->client->user->unlinkUser($this->userAuthorizationId);
-        var_dump(json_encode($resp));
+        // var_dump(json_encode($resp));
         $resultInfo = $resp['resultInfo'];
         $this->assertEquals('REQUEST_ACCEPTED', $resultInfo['code']);
     }

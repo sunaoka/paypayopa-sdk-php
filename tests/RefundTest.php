@@ -25,7 +25,7 @@ final class RefundTest extends TestBoilerplate
 
         // Get data for QR code
         $resp = $client->code->createQRCode($CQCPayload);
-        var_dump($resp);
+        // var_dump($resp);
         $resultInfo = $resp['resultInfo'];
         $this->assertEquals('SUCCESS', $resultInfo['code']);
 
@@ -54,8 +54,8 @@ final class RefundTest extends TestBoilerplate
         $RPPayload->setMerchantRefundId($refundId)->setPaymentId($paymentId)->setAmount($amount)->setRequestedAt();
         $resp = $this->client->refund->refundPayment($RPPayload);
         $resultInfo = $resp['resultInfo'];
-        var_dump('refunded:::');
-        var_dump($resp);
+        // var_dump('refunded:::');
+        // var_dump($resp);
         $this->assertEquals("SUCCESS", $resultInfo['code']);
         $this->data=$resp['data'];
     }
