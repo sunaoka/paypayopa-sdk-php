@@ -6,14 +6,26 @@ use Exception;
 
 class ClientControllerException extends Exception
 {
-    private $resultInfo = false;
-    private $apiInfo = false;
+    /**
+     * @var array{api_name: string, path: string, method: string}|false
+     */
+    private $apiInfo;
 
     /**
-     * @param string|bool $apiInfo
-     * @param array|string $resultInfo
+     * @var array{code: string, message: string, codeId: string}
+     */
+    private $resultInfo;
+
+    /**
+     * @var string|false
+     */
+    private $documentationUrl;
+
+    /**
+     * @param array{api_name: string, path: string, method: string}|false $apiInfo
+     * @param array{code: string, message: string, codeId: string}|string $resultInfo
      * @param int $code
-     * @param string|bool $documentationUrl
+     * @param string|false $documentationUrl
      */
     public function __construct($apiInfo, $resultInfo, $code = 500, $documentationUrl = false)
     {
