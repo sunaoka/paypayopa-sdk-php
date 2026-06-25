@@ -15,7 +15,7 @@ class CashBack extends Controller
      * @var string
      */
     public $headerConstant = 'application/json;charset=UTF-8;';
-    
+
     /**
      * Initializes Code class to manage creation and deletion of data for QR Code generation
      *
@@ -58,11 +58,11 @@ class CashBack extends Controller
      * @return array
      * @throws ClientControllerException
      */
-    public function getCashbackDetails($merchatCashbackId, $paymentType = 'CASHBACK')
+    public function getCashbackDetails($merchantPaymentId, $paymentType = 'CASHBACK')
     {
         $main = $this->MainInst;
-        $url = $main->GetConfig('API_URL') . $main->GetEndpoint('CASHBACK') . "/$merchatCashbackId";
-        $endpoint = '/v2' . $main->GetEndpoint('CASHBACK') . "/$merchatCashbackId";
+        $url = $main->GetConfig('API_URL') . $main->GetEndpoint('CASHBACK') . "/$merchantPaymentId";
+        $endpoint = '/v2' . $main->GetEndpoint('CASHBACK') . "/$merchantPaymentId";
         $options = $this->HmacCallOpts('GET', $endpoint);
         return $this->doCall(true, "v2_getCashbackDetails", $url, [], $options);
     }
@@ -91,16 +91,16 @@ class CashBack extends Controller
     /**
      * Check reversal cashback details
      *
-     * @param string $merchantPaymentId The unique payment transaction id provided by merchant
-     * @param string $paymentType Type of payment e.g. pending, continuous, direct_debit,web_cashier,dynamic_qr,app_invoke
+     * @param string $merchantCashbackReversalId The unique cashback reversal transaction id provided by merchant
+     * @param string $merchantCashbackId The unique cashback transaction id provided by merchant
      * @return array
      * @throws ClientControllerException
      */
-    public function getReversalCashbackDetails($merchantCashbackReversalId, $merchatCashbackId)
+    public function getReversalCashbackDetails($merchantCashbackReversalId, $merchantCashbackId)
     {
         $main = $this->MainInst;
-        $url = $main->GetConfig('API_URL') . "/cashback_reversal" . "/$merchantCashbackReversalId" . "/$merchatCashbackId";
-        $endpoint = '/v2' . "/cashback_reversal" . "/$merchantCashbackReversalId" . "/$merchatCashbackId";
+        $url = $main->GetConfig('API_URL') . "/cashback_reversal" . "/$merchantCashbackReversalId" . "/$merchantCashbackId";
+        $endpoint = '/v2' . "/cashback_reversal" . "/$merchantCashbackReversalId" . "/$merchantCashbackId";
         $options = $this->HmacCallOpts('GET', $endpoint);
         return $this->doCall(true, "v2_getReversedCashBackDetails", $url, [], $options);
     }
