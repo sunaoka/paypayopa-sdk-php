@@ -54,11 +54,10 @@ class CashBack extends Controller
      * Check cashback details
      *
      * @param string $merchantPaymentId The unique payment transaction id provided by merchant
-     * @param string $paymentType Type of payment e.g. pending, continuous, direct_debit,web_cashier,dynamic_qr,app_invoke
      * @return array
      * @throws ClientControllerException
      */
-    public function getCashbackDetails($merchantPaymentId, $paymentType = 'CASHBACK')
+    public function getCashbackDetails($merchantPaymentId)
     {
         $main = $this->MainInst;
         $url = $main->GetConfig('API_URL') . $main->GetEndpoint('CASHBACK') . "/$merchantPaymentId";
