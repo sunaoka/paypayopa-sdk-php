@@ -29,7 +29,9 @@ jobs:
       - name: Upload coverage results to Coveralls
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: make coverall_upload
+        run: |
+          composer global require php-coveralls/php-coveralls
+          php-coveralls --coverage_clover=build/logs/clover.xml -v
 
       - name: Upload to CoPilot
         run: bash <(curl -s https://copilot.blackducksoftware.com/ci/githubactions/scripts/upload)
