@@ -5,7 +5,7 @@ run_mock:
 	XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover build/logs/clover.xml --testdox --debug -c phpunit.xml.dist
 run_tests:
 	clear
-	vendor/bin/phpunit --coverage-clover build/logs/clover.xml --testdox --debug -c phpunit.xml.dist 
+	XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover build/logs/clover.xml --testdox --debug -c phpunit.xml.dist
 run_testlist:
 	clear
 	vendor/bin/phpunit --testdox --debug tests/QrTest.php
@@ -23,4 +23,4 @@ run_coverage:
 	cd mock && java -jar wiremock.jar --verbose &
 # Wait for Wiremock (localhost:8080) to startup.
 	curl -s -o /dev/null -w "%{http_code}" localhost:8080/__admin/mappings --retry-connrefused --retry 60 --retry-max-time 60
-	vendor/bin/phpunit --coverage-clover build/logs/clover.xml --testdox --debug -c phpunit.xml.dist 
+	vendor/bin/phpunit --coverage-clover build/logs/clover.xml --testdox --debug -c phpunit.xml.dist
